@@ -1,0 +1,14 @@
+
+        form {
+            border: solid 2px lightgrey;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        form:focus-within {
+            border-color: pink;
+        }
+
+        tr:hover {
+            background-color: pink;
+        }
