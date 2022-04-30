@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="/stylesheets/stuffStyle.css">
+
+</head>
+
+<body class="pink lighten-5">
+    <div class="container">
+        <div class="section flow-text" id="stuffDetail">
+            <h1>Homework Details:</h1>
+            <table>
+                <tr>
+                    <th>Homework:</th>
+                    <td>[homework name]</td>
+                </tr>
+                <tr>
+                    <th>Due Date:</th>
+                    <td>[due date]</td>
+
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td>
+                        [description]
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="stuffControls">
+            <a class="btn-large waves-effect waves-light pink left modal-trigger" href="#stuffEdit">
+                <i class="material-icons right">edit</i>Edit
+            </a>
+            <a class="btn-large waves-effect waves-light pink right">
+                <i class="material-icons right">delete</i>Delete
+            </a>
+        </div>
+
+
+        <div class="modal" id="stuffEdit">
+
+            <div class="modal-content">
+
+                <h2>Edit:</h2>
+                <form>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <label for="name">Homework:</label>
+                            <input type="text" name="name" class="validate" data-length="32" required>
+                        </div>
+                        <div class="input-field col s6">
+                            <label for="quantity">Due Date:</label>
+                            <input type="number" name="quantity" value=1 required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="description">Description:</label>
+                            <input type="text" name="description" data-length="100">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-large waves-effect waves-light pink" type="submit"><i
+                                class="material-icons right">send</i>Submit</button>
+
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Never Mind</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.clonudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- initialize Materialize elements -->
+    <script> M.AutoInit();</script>
+    
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/stylesheets/stuffStyle.css">
+
+
+</head>
+
+<body class="pink lighten-5">
+    <div class="container">
+        <div class="section" id="stuffList">
+            <h1>Homework:</h1>
+            <table>
+                <thead>
+
+                    <tr>
+                        <th>Homework</th>
+                        <th>Due Date</th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>[enter homework]</td>
+                        <td>5/20/2089</td>
+                        <td>
+                            <a class="btn-small waves-effect waves-light pink right" href="item.html"><i
+                                    class="material-icons right">edit</i>Info/Edit</a>
+                            <a class="btn-small waves-effect waves-light pink right"><i
+                                    class="material-icons right">delete</i>Delete</a>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="stuffAdd">
+            <h2>Add Homework:</h2>
+            <form>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label for="name">Homework Name:</label>
+                        <input type="text" name="name" class="validate" data-length="32" required>
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="quantity">Due Date:</label>
+                        <input type="number" name="quantity" value=1 required>
+                    </div>
+                </div>
+                <button class="btn-small waves-effect waves-light pink rightt" type="submit"><i
+                        class="material-icons right">send</i>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- initialize Materialize elements -->
+    <script> M.AutoInit();</script>
+
+</body>
+
+</html>
