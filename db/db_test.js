@@ -1,11 +1,12 @@
 const db = require("./db_connection");
 
-db.execute('SELECT 1 + 1 AS solution',
-    (error, results)=> {
+db.execute('SELECT 1 + 1 AS solution', 
+    (error, results) => {
         if (error)
-            throw error; 
+            throw error;
         console.log(results);
-    })
+        console.log(`Solution: ${results[0].solution}`);
+    }
+);
 
-db.end(); //optional: close the connectiona fter the queue is empty
-
+db.end();

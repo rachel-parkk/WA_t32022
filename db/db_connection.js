@@ -1,7 +1,5 @@
-
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
-const db = require('./db/db_connection');
 
 dotenv.config();
 
@@ -12,16 +10,8 @@ const dbConfig = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
     connectTimeout: parseInt(process.env.DB_CONNECT_TIMEOUT || "10000")
-};
+}
 
 const connection = mysql.createConnection(dbConfig);
 
-const item = `
-    INSERT INTO item 
-        (item, quantity, description) 
-    VALUES 
-        (?, ?, ?);
-
-`
 module.exports = connection;
-
