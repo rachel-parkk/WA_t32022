@@ -9,4 +9,4 @@ db.execute('SELECT 1 + 1 AS solution',
     }
 );
 
-db.end();
+db.end(); 
