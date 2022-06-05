@@ -1,5 +1,6 @@
-const db = require("./db_connection");
+const db = require("./db_connections");
 
+// Add query request 
 db.execute('SELECT 1 + 1 AS solution', 
     (error, results) => {
         if (error)
@@ -8,5 +9,5 @@ db.execute('SELECT 1 + 1 AS solution',
         console.log(`Solution: ${results[0].solution}`);
     }
 );
-
-db.end(); 
+//Optional: close the connection after queue is emptying.
+db.end();

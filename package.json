@@ -1,17 +1,17 @@
 {
-  "name": "wa_t32022",
+  "name": "new",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "ejs": "^3.1.7",
-    "express": "^4.17.3",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3"
   }

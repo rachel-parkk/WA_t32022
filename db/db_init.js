@@ -1,4 +1,5 @@
-const db = require("./db_connection");
+// (Re)Sets up the database, including a little bit of sample data
+const db = require("./db_connections");
 
 /**** Delete existing table, if any ****/
 
@@ -11,24 +12,28 @@ db.execute(drop_stuff_table_sql);
 const create_stuff_table_sql = `
     CREATE TABLE stuff (
         id INT NOT NULL AUTO_INCREMENT,
-        item VARCHAR(45) NOT NULL,
-        quantity INT NOT NULL,
+        homework VARCHAR(45) NOT NULL,
+        due_date VARCHAR(150) NOT NULL,
         description VARCHAR(150) NULL,
         PRIMARY KEY (id)
     );
 `
 db.execute(create_stuff_table_sql);
 
-/**** Create some sample items ****/
 
 const insert_stuff_table_sql = `
     INSERT INTO stuff 
-        (item, quantity, description) 
+        (homework, due_date, description) 
     VALUES 
         (?, ?, ?);
 `
+db.execute(insert_stuff_table_sql, ['Chem Webassign', '5/20/2022', 'im rly bad at chem :(']);
 
-/**** Read the sample items inserted ****/
+db.execute(insert_stuff_table_sql, ['English project', '6/2/2022', null]);
+
+db.execute(insert_stuff_table_sql, ['history DBQ', '6/10/2022', 'i dont know what its on tbh !!']);
+
+db.execute(insert_stuff_table_sql, ['math hw', '1/20/2022', 'late homework assignment!!']);
 
 const read_stuff_table_sql = "SELECT * FROM stuff";
 
