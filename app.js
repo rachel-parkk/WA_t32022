@@ -2,7 +2,9 @@ const express = require( "express" );
 const logger = require("morgan");
 const db = require('./db/db_connections');
 const app = express();
-const port = 8080;
+
+
+const port = process.env.PORT;
 
 
 app.set( "views",  __dirname + "/views");
