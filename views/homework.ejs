@@ -21,17 +21,17 @@
             <table>
                 <tr>
                     <th>Homework:</th>
-                    <td>[homework name]</td>
+                    <td><%= homework %></td>
                 </tr>
                 <tr>
                     <th>Due Date:</th>
-                    <td>[due date]</td>
+                    <td><%= due_date %></td>
 
                 </tr>
                 <tr>
                     <th>Description:</th>
                     <td>
-                        [description]
+                        <td><%= description %></td>
                     </td>
                 </tr>
             </table>
@@ -41,7 +41,7 @@
             <a class="btn-large waves-effect waves-light pink left modal-trigger" href="#stuffEdit">
                 <i class="material-icons right">edit</i>Edit
             </a>
-            <a class="btn-large waves-effect waves-light pink right">
+            <a class="btn-large waves-effect waves-light pink left"  href="/stuff/homework/<%= id %>/delete">
                 <i class="material-icons right">delete</i>Delete
             </a>
         </div>
@@ -52,21 +52,21 @@
             <div class="modal-content">
 
                 <h2>Edit:</h2>
-                <form>
+                <form method="post" action="/stuff/homework/<%= id%>"> <!-- default action is the page's URL --> 
                     <div class="row">
                         <div class="input-field col s6">
-                            <label for="name">Homework:</label>
-                            <input type="text" name="name" class="validate" data-length="32" required>
+                            <label for="nameInput">Homework:</label>
+                            <input type="text" name="homework" id="nameInput" class="validate" data-length="32" value="<%= homework%>" required>
                         </div>
                         <div class="input-field col s6">
-                            <label for="quantity">Due Date:</label>
-                            <input type="number" name="quantity" value=1 required>
+                            <label for="duedateInput">Due Date:</label>
+                            <input type="text" name="due_date" id="duedateInput" class="validate" data-length="32" value="<%= homework%>" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <label for="description">Description:</label>
-                            <input type="text" name="description" data-length="100">
+                            <label for="descriptionInput">Description:</label>
+                            <input type="text" name="description" id="descriptionInput" data-length="100" value="<%= description%>">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -75,7 +75,7 @@
 
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Never Mind</a>
                     </div>
-                </form>
+                <form method="post" action="/stuff/homework/<%= id%>"> <!-- default action is the page's URL --> 
             </div>
 
         </div>

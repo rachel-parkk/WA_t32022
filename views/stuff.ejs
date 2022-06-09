@@ -34,10 +34,12 @@
                         <td><%= inventory[i].homework %></td>
                         <td><%= inventory[i].due_date %></td>
                         <td>
-                            <a class="btn-small waves-effect waves-light pink right" href=<%= "/stuff/item/" + inventory[i].id %> ><i
+                            <a class="btn-small waves-effect waves-light pink right" href=<%= "/stuff/homework/" + inventory[i].id %> ><i
                                     class="material-icons right">edit</i>Info/Edit</a>
-                            <a class="btn-small waves-effect waves-light pink right"><i
-                                    class="material-icons right">delete</i>Delete</a>
+                            <a class="btn-small waves-effect waves-light pink right" href="/stuff/homework/<%= inventory[i].id %>/delete">
+                                <i class="material-icons right">delete</i>
+                                    Delete
+                             </a>
                         </td>
                     </tr>
                     <% } %>
@@ -47,20 +49,20 @@
 
         <div class="section" id="stuffAdd">
             <h2>Add Homework:</h2>
-            <form>
+            <form method="post" action="/stuff"> 
                 <div class="row">
                     <div class="input-field col s6">
-                        <label for="name">Homework Name:</label>
-                        <input type="text" name="name" class="validate" data-length="32" required>
+                        <label for="homework">Homework Name:</label>
+                        <input type="text" name="homework" class="validate" data-length="32" required>
                     </div>
                     <div class="input-field col s6">
-                        <label for="quantity">Due Date:</label>
-                        <input type="number" name="quantity" value=1 required>
+                        <label for="text">Due Date:</label>
+                        <input type="text" name="due_date" class="validate" data-length="32" required>
                     </div>
                 </div>
                 <button class="btn-small waves-effect waves-light pink rightt" type="submit"><i
                         class="material-icons right">send</i>Submit</button>
-            </form>
+             <form method="post" action="/stuff"> 
         </div>
     </div>
 
